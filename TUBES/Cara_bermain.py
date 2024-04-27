@@ -12,8 +12,8 @@ class Cara_Bermain(Halaman):
 
         self.tombol_kembali = Tombol("asset/button_back.png",pilihan=  "topleft", posisi = (10, 10))
 
-        self.cara_bermain = pygame.image.load("asset/button_question.png")
-        self.cara_bermain_rect = self.cara_bermain.get_rect(bottomright = (10, 10))
+        self.cara_bermain = pygame.image.load("asset/board_aturan.png")
+        self.cara_bermain_rect = self.cara_bermain.get_rect(center = (500, 333))
 
     def input(self):
         if self.tombol_kembali.diklik():

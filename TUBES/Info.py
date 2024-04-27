@@ -12,7 +12,7 @@ class Info(Halaman):
 
         self.tombol_kembali = Tombol("asset/button_back.png",pilihan=  "topleft", posisi = (30, 30))
 
-        self.info = pygame.image.load("asset/board.png")
+        self.info = pygame.image.load("asset/board_info.png")
         self.info_rect = self.info.get_rect(center = (500, 333))
 
     def input(self):
