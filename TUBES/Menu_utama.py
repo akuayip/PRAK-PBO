@@ -16,9 +16,8 @@ class Menu_utama(Halaman):
         self.tombol_info = Tombol("asset/button_info.png", pilihan= "center", posisi= (500, 400))
         self.tombol_keluar = Tombol("asset/button_exit.png", pilihan= "center", posisi= (500, 480))
         self.tombol_tanya_tanya = Tombol("asset/button_question.png", pilihan= "topright", posisi=(970, 30))
-        self.tombol_mute = Tombol("asset/button_unmute.png", pilihan="bottomleft", posisi=(30, 633))
-        
-        
+        self.tombol_mute = Tombol("asset/button_mute.png", pilihan="bottomleft", posisi=(30, 633))
+
         self.timer = True
         self.status_mute = False
 
@@ -34,24 +33,20 @@ class Menu_utama(Halaman):
         if self.tombol_info.diklik():
             self.status_game_sekarang["halaman_sekarang"] = "Info"
 
-        if self.tombol_keluar.diklik():
-            pygame.quit()
-            exit()
-
         if self.tombol_tanya_tanya.diklik():
             self.status_game_sekarang["halaman_sekarang"] = "Cara_Bermain"
         
         if self.tombol_mute.diklik():
-            print("Tombol mute diklik")
             self.status_mute = not self.status_mute
-            if self.status_mute :
+            if self.status_mute:
                 self.backgroundsound.stop()
-            else :
-                self.backgroundsound.play(-1)
-   
+            else:
+                self.backgroundsound.play(-1)   
 
+        if self.tombol_keluar.diklik():
+            pygame.quit()
+            exit()
         
-
     def tampil(self):
         screen.blit(self.gambar, (self.gambar_rect))
         self.tombol_mulai.tampil()
@@ -59,3 +54,4 @@ class Menu_utama(Halaman):
         self.tombol_keluar.tampil()
         self.tombol_tanya_tanya.tampil()
         self.tombol_mute.tampil()
+

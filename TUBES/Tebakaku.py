@@ -12,15 +12,19 @@ class Tebakaku(Halaman):
         self.tombol_kembali = Tombol("asset/button_back.png", pilihan="topleft", posisi=(30, 30))
         self.board = pygame.image.load("asset/board.png")
         self.board_rect = self.board.get_rect(center=(500, 333))
-        self.win = pygame.image.load("asset/win.png")
-        self.win_rect = self.win.get_rect(center=(500,275))
+        self.win1 = pygame.image.load("asset/win1.png")
+        self.win1_rect = self.win1.get_rect(center=(500,275))
+        self.win2 = pygame.image.load("asset/win2.png")
+        self.win2_rect = self.win2.get_rect(center=(500,275))
+        self.win3 = pygame.image.load("asset/win3.png")
+        self.win3_rect = self.win3.get_rect(center=(500,275))
         self.status_win = False
 
         # Font
         self.font = pygame.font.SysFont(None, 34)
 
         # Angka rahasia
-        self.angka_rahasia = random.randint(1, 1)
+        self.angka_rahasia = random.randint(1, 100)
         self.tebakan = None
         self.jumlah_tebakan = 0
 
@@ -41,7 +45,7 @@ class Tebakaku(Halaman):
         self.pesan_tebakan_rect = None
 
     def reset(self):
-        self.angka_rahasia = random.randint(1, 1)
+        self.angka_rahasia = random.randint(1, 100)
         self.tebakan = None
         self.jumlah_tebakan = 0
         self.input_text = ''
@@ -94,7 +98,12 @@ class Tebakaku(Halaman):
 
         # Icon Win
         if self.status_win:
-            screen.blit(self.win, self.win_rect)
+            if self.jumlah_tebakan < 4:
+                screen.blit(self.win1, self.win1_rect)
+            elif self.jumlah_tebakan < 7:
+                screen.blit(self.win2, self.win2_rect)
+            else :
+                screen.blit(self.win3, self.win3_rect)
     
         # Tampilkan teks
         if self.status_teks:
