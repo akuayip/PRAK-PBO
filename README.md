@@ -1,4 +1,5 @@
 # TEBAK AKU GAME
+<img width="960" alt="Game" src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/Game-Tebak-Aku.png">
 
 # Table of Contents
 [Description]
