@@ -39,7 +39,6 @@ python main.py
 ## Documentation 
 
 <p align="center">
-  <img src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/Screenshot%202024-04-27%20120745.png" width="425" />
   <img src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/2.1.png" width="425" /> 
   <img src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/2.2.png" width="425" /> 
   <img src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/2.3.png" width="425" /> 
