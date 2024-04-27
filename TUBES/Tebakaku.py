@@ -40,9 +40,21 @@ class Tebakaku(Halaman):
         self.pesan_tebakan_rendered = None
         self.pesan_tebakan_rect = None
 
+    def reset(self):
+        self.angka_rahasia = random.randint(1, 100)
+        self.tebakan = None
+        self.jumlah_tebakan = 0
+        self.input_text = ''
+        self.status_teks = True
+        self.status_kotak = True
+        self.status_win = False
+        self.pesan_tebakan_rendered = None  
+        self.pesan_tebakan_rect = None
+
     def input(self):
         if self.tombol_kembali.diklik():
             self.status_game_sekarang["halaman_sekarang"] = "Menu_utama"
+            self.reset()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -59,24 +71,22 @@ class Tebakaku(Halaman):
         if self.input_text and self.input_text.isdigit():
             self.tebakan = int(self.input_text)
             self.jumlah_tebakan += 1
-
+        
             if self.tebakan < self.angka_rahasia:
                 self.pesan_tebakan = "Tebakan Anda terlalu rendah. Coba lagi."
             elif self.tebakan > self.angka_rahasia:
                 self.pesan_tebakan = "Tebakan Anda terlalu tinggi. Coba lagi."
             else:
                 self.pesan_tebakan = f"Selamat! Anda menebak dengan benar! \nAngka rahasia adalah {self.angka_rahasia}. \nAnda menebak dalam \n{self.jumlah_tebakan} kali tebakan."
-                self.tebakan = None
-                self.angka_rahasia = random.randint(1, 100)
-                self.jumlah_tebakan = 0
                 self.status_teks = False
                 self.status_kotak = False
                 self.status_win = True
+            
             self.input_text = ''  # Reset input
-
             # Render pesan tebakan
             self.pesan_tebakan_rendered = self.font.render(self.pesan_tebakan, True, (255, 255, 255))
             self.pesan_tebakan_rect = self.pesan_tebakan_rendered.get_rect(center=(500, 400))
+            
 
     def tampil(self):
         self.tombol_kembali.tampil()
@@ -105,4 +115,4 @@ class Tebakaku(Halaman):
 
         # Tampilkan pesan tebakan
         if self.pesan_tebakan_rendered:
-            screen.blit(self.pesan_tebakan_rendered, self.pesan_tebakan_rect)
+            screen.blit(self.pesan_tebakan_rendered, self.pesan_tebakan_rect)    
