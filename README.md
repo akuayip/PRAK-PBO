@@ -37,4 +37,10 @@ python main.py
 ```
 
 ## Documentation 
-cooming soon
+
+<p align="center">
+  <img src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/Screenshot%202024-04-27%20120745.png" width="450" />
+  <img src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/Screenshot%202024-04-27%20120403.png" width="450" /> 
+</p>
+
+
