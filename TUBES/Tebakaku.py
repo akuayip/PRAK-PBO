@@ -20,7 +20,7 @@ class Tebakaku(Halaman):
         self.font = pygame.font.SysFont(None, 34)
 
         # Angka rahasia
-        self.angka_rahasia = random.randint(1, 100)
+        self.angka_rahasia = random.randint(1, 1)
         self.tebakan = None
         self.jumlah_tebakan = 0
 
@@ -41,7 +41,7 @@ class Tebakaku(Halaman):
         self.pesan_tebakan_rect = None
 
     def reset(self):
-        self.angka_rahasia = random.randint(1, 100)
+        self.angka_rahasia = random.randint(1, 1)
         self.tebakan = None
         self.jumlah_tebakan = 0
         self.input_text = ''
