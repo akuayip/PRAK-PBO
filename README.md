@@ -2,13 +2,13 @@
 <img width="960" alt="Game" src="https://github.com/akuayip/PRAK-PBO-Tebakaku/blob/main/TUBES/asset/Game-Tebak-Aku.png">
 
 # Table of Contents
-[Description]
+[Description](#Description)
 
-[Library]
+[Library](#Library)
 
-[How to Play]
+[How to Play](#How-to-Play)
 
-## Description
+## Description  
 Tebak Aku Game adalah sebuah game logika. Ini adalah permainan yang sederhana tetapi menarik karena memerlukan pemikiran logis dan keberuntungan untuk menebak angka dengan benar dalam jumlah tebakan yang sekecil mungkin.
 
 Aturan permainannya sebagai berikut :
